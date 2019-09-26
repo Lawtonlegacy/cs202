@@ -29,8 +29,13 @@ int main()
 	int part2 = getNum();
 	std::string part2string = getLineText();
 
-	//Part 3
+	//Part 3 Append user number of copies of the line of text to the file
+	std::ofstream ofile("readwrite.txt", std::ios::app);
 	
+	for (int i = 0; i < part2; ++i) {
+		ofile << part2string << std::endl;
+	}
+
 
 	return 0;
 }
