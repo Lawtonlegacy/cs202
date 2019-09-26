@@ -18,11 +18,7 @@ int main()
 	std::string fromStream;
 	std::ifstream ifile;
 	ifile.open("readwrite.txt");
-	//ifile >> s1;
-	//ifile >> s2;
-	//ifile >> s3;
-	//ifile >> s4;
-	//ifile >> s5;
+
 
 	std::getline(ifile, fromStream);
 	std::cout << fromStream << std::endl;
