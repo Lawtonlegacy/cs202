@@ -3,13 +3,19 @@
 // CS 202
 // Hartman
 //
-#include <iostream>
+#include "names.h"
 
+
+void foo() {
+	std::cout << "foo function from main.cpp" << std::endl;
+}
 
 
 int main(){
 
-	std::cout << "Hello World" << std::endl;
+	foo();
+	myspace::foo();
+	
 
 	return 0;
 }
