@@ -6,8 +6,16 @@ Hartman
 */
 
 #include <iostream>
+#include <fstream>
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	std::ifstream infile("data.dat", std::ios::binary);
+
+
+
+
+
+	return 0;
 }
