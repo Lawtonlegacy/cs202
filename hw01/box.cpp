@@ -6,11 +6,18 @@
 #include "box.hpp"
 
 
-Box::Box():			//Default Constructor
+//Default Constructor
+Box::Box():		
 	_height(1),
 	_width(1),		
 	_filled(true)
 {}
 
+//Constructor for user dimension input
+Box::Box(int width, int height):		
+	_height(height),
+	_width(width),
+	_filled(true)
+{}
 
 

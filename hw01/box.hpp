@@ -13,7 +13,9 @@ class Box {
 
 public:
 
-	Box();		//Default Constructor
+	Box();		
+
+	Box(int width, int height);		
 
 
 
