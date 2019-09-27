@@ -26,7 +26,9 @@ public:
 
 	int getHeight();
 
+	void setWidth(int width);
 
+	void setHeight(int height);
 
 
 

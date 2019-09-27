@@ -44,3 +44,14 @@ int Box::getWidth() {
 int Box::getHeight() {
 	return _height;
 }
+
+//setWidth() mutator function
+void Box::setWidth(int width) {
+	_width = width;
+}
+
+//setHeight() mutator function
+void Box::setHeight(int height) {
+	_height = height;
+}
+
