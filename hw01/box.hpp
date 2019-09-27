@@ -17,7 +17,7 @@ public:
 
 	Box(int width, int height);		
 
-
+	Box(int width, int height, bool foh);
 
 
 

@@ -20,4 +20,9 @@ Box::Box(int width, int height):
 	_filled(true)
 {}
 
-
+//Constructor to determine whether filled or hollow and dimension input
+Box::Box(int width, int height, bool foh):
+	_height(height),
+	_width(width),
+	_filled(foh)
+{}
