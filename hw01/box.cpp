@@ -28,7 +28,7 @@ Box::Box(int width, int height, bool foh):
 {}
 
 //Member funciton named type() that returns string "Filled" or string "Hollow
-std::string Box::type() {
+std::string Box::type(){
 	if (_filled){
 		return "Filled";
 	}
@@ -36,22 +36,22 @@ std::string Box::type() {
 }
 
 //getWidth() accessor function
-int Box::getWidth() {
+int Box::getWidth() const{
 	return _width;
 }
 
 //getHeight() accessor function
-int Box::getHeight() {
+int Box::getHeight() const{
 	return _height;
 }
 
 //setWidth() mutator function
-void Box::setWidth(int width) {
+void Box::setWidth(int width){
 	_width = width;
 }
 
 //setHeight() mutator function
-void Box::setHeight(int height) {
+void Box::setHeight(int height){
 	_height = height;
 }
 
