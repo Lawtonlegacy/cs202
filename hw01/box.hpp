@@ -18,19 +18,19 @@ public:
 
 	Box(int width, int height);		
 
-	Box(int width, int height, bool foh);
+	Box(int width, int height, bool filled);
 
 	std::string type();
 
-	int getWidth();
+	int getWidth() const;
 
-	int getHeight();
+	int getHeight() const;
 
 	void setWidth(int width);
 
 	void setHeight(int height);
 
-	
+	void print(std::ostream& stream);
 
 
 private:
