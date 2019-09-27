@@ -1,26 +1,57 @@
-//
-//  main.cpp
-//  BinaryStreams
-//
-//  Created by Chris Hartman on 9/24/19.
-//  Copyright © 2019 Chris Hartman. All rights reserved.
-//
+// Lab 5 Binary Files
+// 
 
 #include <iostream>
 #include <fstream>
-#include <iomanip>
+#include <vector>
+
+void print(std::vector<int> const& input);
 
 int main() {
-	   //std::ofstream ofile("output.dat" , std::ios::binary);
-	
-	   //for(int i=0;i<100;++i)
-	   //   ofile.write(reinterpret_cast<const char *>(&i),sizeof(i));
 
+	//open file in binary mode rather than text
+	std::ifstream file("data.dat", std::ios::binary);
 
-	std::ifstream ifile("output.dat", std::ios::binary);
-	ifile.seekg(sizeof(int) * 42);
-	int x;
-	ifile.read(reinterpret_cast<char*>(&x), sizeof(int));
-	std::cout << x << "\n";
+	//error if problem
+	if (!file) {
+		std::cout << "Error opening file \n";
+	}
+
+	std::vector<int> data; //container to hold integers from file
+	int counter = 0;
+
+	while (true) {
+		file.seekg(sizeof(int) * counter);
+		int x;
+		file.read(reinterpret_cast<char*>(&x), sizeof(int));
+		data.push_back(x);
+		counter++;
+		if (!file) {
+			if (file.eof()) {
+				break;
+			}
+		}
+	}
+	int total = data.size();
+	int sum = 0;
+
+	for (auto i : data) {
+		sum += data[i];
+	}
+
+	double average = (double)sum / total;
+
+	std::cout << "\n This is the total: " << total << "\n";
+	std::cout << "\n This is the sum: " << sum << "\n";
+	std::cout << "\n This is the average: " << average << "\n";
+
 	return 0;
+
+}
+
+void print(std::vector<int> const& input) {
+
+	for (int i = 0; i < input.size(); i++) {
+		std::cout << input.at(i) << std::endl;
+	}
 }
