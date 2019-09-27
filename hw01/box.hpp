@@ -6,7 +6,7 @@
 #ifndef BOX_HPP
 #define BOX_HPP
 
-
+#include <string>
 
 
 class Box {
@@ -19,6 +19,7 @@ public:
 
 	Box(int width, int height, bool foh);
 
+	std::string type();
 
 
 

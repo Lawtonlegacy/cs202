@@ -26,3 +26,11 @@ Box::Box(int width, int height, bool foh):
 	_width(width),
 	_filled(foh)
 {}
+
+//Member funciton named type() that returns string "Filled" or string "Hollow
+std::string Box::type() {
+	if (_filled){
+		return "Filled";
+	}
+	return "Hollow";
+}
