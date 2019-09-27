@@ -23,6 +23,9 @@ public:
 
 private:
 
+	int _height;
+	int _width;
+	bool _filled;
 
 };
 
