@@ -7,6 +7,7 @@
 #define BOX_HPP
 
 #include <string>
+#include <ostream>
 
 
 class Box {
@@ -20,6 +21,12 @@ public:
 	Box(int width, int height, bool foh);
 
 	std::string type();
+
+	int getWidth();
+
+	int getHeight();
+
+
 
 
 

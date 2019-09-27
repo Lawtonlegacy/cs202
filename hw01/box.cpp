@@ -34,3 +34,13 @@ std::string Box::type() {
 	}
 	return "Hollow";
 }
+
+//getWidth() accessor function
+int Box::getWidth() {
+	return _width;
+}
+
+//getHeight() accessor function
+int Box::getHeight() {
+	return _height;
+}
