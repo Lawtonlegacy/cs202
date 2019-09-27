@@ -20,7 +20,7 @@ public:
 
 	Box(int width, int height, bool filled);
 
-	std::string type();
+	std::string type() const;
 
 	int getWidth() const;
 
@@ -30,7 +30,7 @@ public:
 
 	void setHeight(int height);
 
-	void print(std::ostream& stream);
+	void print(std::ostream& stream) const;
 
 
 private:

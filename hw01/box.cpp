@@ -19,7 +19,7 @@ Box::Box(int width, int height, bool filled):
 	_height(height), _width(width), _filled(filled){}
 
 //Member funciton named type() that returns string "Filled" or string "Hollow
-std::string Box::type(){
+std::string Box::type() const{
 	if (_filled){
 		return "Filled";
 	}
@@ -44,4 +44,25 @@ void Box::setWidth(int width){
 //setHeight() mutator function
 void Box::setHeight(int height){
 	_height = height;
+}
+
+//Member function that draws the box to the ostream
+void Box::print(std::ostream & output) const{
+
+	for (int row = 0; row < _height; ++row){
+		
+		for (int column = 0; column < _width; column++){
+
+			if (row == 0 || row == _height - 1) {
+				output << "x";
+			}else if(column == 0 || column == _width-1){
+				output << "x";
+			}else if(_filled){
+				output << "x";
+			}else{
+				output << " ";
+			}
+		}
+		output << "\n";
+	}
 }
