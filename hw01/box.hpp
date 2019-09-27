@@ -26,12 +26,11 @@ public:
 
 	int getHeight() const;
 
-	void setWidth(int width);
+	void setWidth(const int & width);
 
-	void setHeight(int height);
+	void setHeight(const int & height);
 
 	void print(std::ostream& stream) const;
-
 
 private:
 

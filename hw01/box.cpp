@@ -37,12 +37,12 @@ int Box::getHeight() const{
 }
 
 //setWidth() mutator function
-void Box::setWidth(int width){
+void Box::setWidth(const int & width){
 	_width = width;
 }
 
 //setHeight() mutator function
-void Box::setHeight(int height){
+void Box::setHeight(const int & height){
 	_height = height;
 }
 
@@ -51,11 +51,11 @@ void Box::print(std::ostream & output) const{
 
 	for (int row = 0; row < _height; ++row){
 		
-		for (int column = 0; column < _width; column++){
+		for (int col = 0; col < _width; col++){
 
 			if (row == 0 || row == _height - 1) {
 				output << "x";
-			}else if(column == 0 || column == _width-1){
+			}else if(col == 0 || col == _width-1){
 				output << "x";
 			}else if(_filled){
 				output << "x";
