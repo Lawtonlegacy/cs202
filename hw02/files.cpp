@@ -32,6 +32,11 @@ int getIdFromFile(std::string filename, std::istream & input, std::ostream & out
 	while (std::getline(input, nameline)){
 		listOfNames.push_back(nameline);
 	}
+	
+	//loop to read usernames
+	for (auto name : listOfNames){
 
+
+	}
 
 }
