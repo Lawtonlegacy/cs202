@@ -6,7 +6,14 @@
 #ifndef FILES_HPP
 #define FILES_HPP
 
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <ostream>
+#include <sstream>
+#include <vector>
 
+int getIdFromFile(std::string filename, std::istream& input, std::ostream& output);
 
 
 

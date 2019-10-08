@@ -5,12 +5,7 @@
 
 #include "files.hpp"
 
-#include <iostream>
-#include <string>
-#include <fstream>
-#include <ostream>
-#include <sstream>
-#include <vector>
+
 
 
 //Exercise A - "getIdFromFile" function
