@@ -33,13 +33,13 @@ int getIdFromFile(std::string filename, std::istream & input, std::ostream & out
 				output << "error\n";
 			}
 		}
-
-	} 
-	else {
+		return 0; 
+	} else {
 		return -1;
 	}
-
-
 }
+
+//Exercise B - "numberChase" function
+
 
 
