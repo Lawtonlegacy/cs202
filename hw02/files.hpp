@@ -12,9 +12,6 @@
 #include <ostream>
 
 
-
-
-
 int getIdFromFile(std::string filename, std::istream& input, std::ostream& output);
 
 
