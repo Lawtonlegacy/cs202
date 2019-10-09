@@ -17,11 +17,21 @@ int getIdFromFile(std::string filename, std::istream & input, std::ostream & out
 	// Code to execute if file is open
 	if (ifile.is_open()){
 		std::string username, temp;
-		int userId, tempid;
+		int userId;
 		while (input >> username) {
 			ifile.clear();
 			ifile.seekg(0, std::ios::beg);
 			bool found = false;
+			while (ifile >> temp >> userId) {
+				if (temp == username) {
+					found = true;
+					output << userId, "\n";
+					break;
+				}
+			} // error if not found
+			if (!found) {
+				output << "error\n";
+			}
 		}
 
 	} 
