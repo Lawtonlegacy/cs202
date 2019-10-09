@@ -10,11 +10,12 @@
 #include <string>
 #include <fstream>
 #include <ostream>
-#include <sstream>
-#include <vector>
+
+
+
+
 
 int getIdFromFile(std::string filename, std::istream& input, std::ostream& output);
-
 
 
 #endif
