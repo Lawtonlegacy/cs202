@@ -25,7 +25,7 @@ int getIdFromFile(std::string filename, std::istream & input, std::ostream & out
 			while (ifile >> temp >> userId) {
 				if (temp == username) {
 					found = true;
-					output << userId, "\n";
+					output << userId << "\n";
 					break;
 				}
 			} // error if not found
@@ -40,6 +40,13 @@ int getIdFromFile(std::string filename, std::istream & input, std::ostream & out
 }
 
 //Exercise B - "numberChase" function
+void numberChase(std::string filename, std::ostream& output) {
 
+	//open file to read binary file in random access
+	std::ifstream ifile(fileName, std::ios::in | std::ios::binary);
+
+
+
+}
 
 

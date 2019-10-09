@@ -13,6 +13,6 @@
 
 
 int getIdFromFile(std::string filename, std::istream& input, std::ostream& output);
-
+void numberChase(std::string filename, std::ostream& output);
 
 #endif

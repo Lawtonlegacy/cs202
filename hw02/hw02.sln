@@ -5,6 +5,15 @@ VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hw02", "hw02.vcxproj", "{02C25E3E-AD8A-48FA-9861-655FD9190FE1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4B6415D9-4B08-44DE-A729-73C15177391A}"
+	ProjectSection(SolutionItems) = preProject
+		goseek1.dat = goseek1.dat
+		goseek2.dat = goseek2.dat
+		goseek3.dat = goseek3.dat
+		users.txt = users.txt
+		users2.txt = users2.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
