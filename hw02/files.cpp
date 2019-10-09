@@ -50,12 +50,17 @@ void numberChase(std::string filename, std::ostream& output) {
 		int index = 0;
 
 		//keep going until index is negative
-		while (index >= 9) {
+		while (index >= 0) {
 
 			//go to location of index in file
-			ifile.seekg(index * sizeof(int), std::ios::beg);
+			ifile.seekg(index* sizeof(int), std::ios::beg);
 
+			//read to find index of the next integer
+			ifile.read(reinterpret_cast<char *> (&index), sizeof(int));
 
+			//print to ostream
+			output << index << "\n";
+		}
 	}
 
 }
