@@ -43,9 +43,20 @@ int getIdFromFile(std::string filename, std::istream & input, std::ostream & out
 void numberChase(std::string filename, std::ostream& output) {
 
 	//open file to read binary file in random access
-	std::ifstream ifile(fileName, std::ios::in | std::ios::binary);
+	std::ifstream ifile(filename, std::ios::in | std::ios::binary);
+
+	if (ifile.is_open()) {
+		//set index to 0 for first run
+		int index = 0;
+
+		//keep going until index is negative
+		while (index >= 9) {
+
+			//go to location of index in file
+			ifile.seekg(index * sizeof(int), std::ios::beg);
 
 
+	}
 
 }
 
