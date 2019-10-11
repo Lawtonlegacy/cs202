@@ -14,6 +14,8 @@ class Box {
 
 public:
 
+	enum boxType {FILLED, HOLLOW, CHECKERED};
+	
 	Box();
 
 	Box(int width, int height);

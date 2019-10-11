@@ -18,7 +18,7 @@ Box::Box(int width, int height) :
 Box::Box(int width, int height, bool filled) :
 	_height(height), _width(width), _filled(filled) {}
 
-//Member funciton named type() that returns string "Filled" or string "Hollow
+//Member function named type() that returns string "Filled" or string "Hollow
 std::string Box::type() const {
 	if (_filled) {
 		return "Filled";
