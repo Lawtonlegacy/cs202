@@ -9,11 +9,11 @@ class Stuff {
 private:
 
 	int _var1;
+	static int _var2;
 
 public:
 
-	static int _var2;
-
+	
 	int getVar1() {
 		return _var1;
 	}
