@@ -20,10 +20,16 @@ Box::Box(int width, int height, enum boxType type) :
 
 //Member function named type() that returns string "Filled" or string "Hollow
 std::string Box::type() const {
-	if (_filled) {
-		return "Filled";
+	switch (_filled) {
+		case FILLED:
+			return "Filled";
+		case HOLLOW:
+			return "Hollow";
+		case CHECKERED:
+			return "Checkered";
+		default:
+			return "Error.. box type not specified";
 	}
-	return "Hollow";
 }
 
 //getWidth() accessor function
