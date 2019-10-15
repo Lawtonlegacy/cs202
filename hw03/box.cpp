@@ -8,15 +8,15 @@
 
 //Default Constructor
 Box::Box() :
-	_height(1), _width(1), _filled(true) {}
+	_height(1), _width(1), _filled(Box::FILLED) {}
 
 //Constructor for user dimension input
 Box::Box(int width, int height) :
-	_height(height), _width(width), _filled(true) {}
+	_height(height), _width(width), _filled(Box::FILLED) {}
 
 //Constructor to determine whether filled or hollow and dimension input
-Box::Box(int width, int height, bool filled) :
-	_height(height), _width(width), _filled(filled) {}
+Box::Box(int width, int height, enum boxType type) :
+	_height(height), _width(width), _filled(type) {}
 
 //Member function named type() that returns string "Filled" or string "Hollow
 std::string Box::type() const {

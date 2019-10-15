@@ -20,7 +20,7 @@ public:
 
 	Box(int width, int height);
 
-	Box(int width, int height, bool filled);
+	Box(int width, int height, enum boxType type);
 
 	std::string type() const;
 
@@ -38,7 +38,7 @@ private:
 
 	int _height;
 	int _width;
-	bool _filled;
+	boxType _filled;
 
 };
 
