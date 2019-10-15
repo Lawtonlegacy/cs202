@@ -29,6 +29,19 @@ Box::Box(int width, int height, enum boxType type) :
 	++Box::_boxCount;
 }
 
+//Copy Constructor for keepign track of Box Amount
+Box::Box(const Box& previous):
+	_height(previous._height), _width(previous._width), _filled(previous._filled)
+{
+	++Box::_boxCount;
+}
+
+//Deconstructor for keeping track of Box amount
+Box::~Box()
+{
+	--Box::_boxCount;
+}
+
 //Member function to keep track of how many Box objects exist
 int Box::howMany() {
 	return Box::_boxCount;

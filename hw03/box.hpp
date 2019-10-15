@@ -22,6 +22,10 @@ public:
 
 	Box(int width, int height, enum boxType type);
 
+	Box(const Box& previous);
+
+	~Box();
+
 	int howMany();
 
 	std::string type() const;
