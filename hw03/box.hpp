@@ -35,7 +35,7 @@ public:
 	void print(std::ostream& stream) const;
 
 private:
-
+	static int _boxcount;
 	int _height;
 	int _width;
 	boxType _filled;
