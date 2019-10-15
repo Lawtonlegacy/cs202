@@ -22,6 +22,8 @@ public:
 
 	Box(int width, int height, enum boxType type);
 
+	int howMany();
+
 	std::string type() const;
 
 	int getWidth() const;
@@ -35,7 +37,7 @@ public:
 	void print(std::ostream& stream) const;
 
 private:
-	static int _boxcount;
+	static int _boxCount;
 	int _height;
 	int _width;
 	boxType _filled;

@@ -6,28 +6,34 @@
 #include "box.hpp"
 
 // Static int that keeps count of boxes made
-int Box::_boxcount = 0;
+int Box::_boxCount = 0;
 
 //Default Constructor
 Box::Box() :
 	_height(1), _width(1), _filled(Box::FILLED) 
 {
-	++Box::_boxcount;
+	++Box::_boxCount;
 }
 
 //Constructor for user dimension input
 Box::Box(int width, int height) :
 	_height(height), _width(width), _filled(Box::FILLED) 
 {
-	++Box::_boxcount;
+	++Box::_boxCount;
 }
 
 //Constructor to determine whether filled or hollow and dimension input
 Box::Box(int width, int height, enum boxType type) :
 	_height(height), _width(width), _filled(type) 
 {
-	++Box::_boxcount;
+	++Box::_boxCount;
 }
+
+//Member function to keep track of how many Box objects exist
+int Box::howMany() {
+	return Box::_boxCount;
+}
+
 
 //Member function named type() that returns string "Filled" or string "Hollow
 std::string Box::type() const {
