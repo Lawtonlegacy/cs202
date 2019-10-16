@@ -58,7 +58,7 @@ std::string Box::type() const {
 		case CHECKERED:
 			return "Checkered";
 		default:
-			return "Error.. box type not specified";
+			return "Error.. box type not detected";
 	}
 }
 
@@ -80,6 +80,12 @@ void Box::setWidth(const int& width) {
 //setHeight() mutator function
 void Box::setHeight(const int& height) {
 	_height = height;
+}
+
+//Overloaded stream insertion operator
+std::ostream& operator<<(std::ostream& output, const Box& box) {
+	box.print(output);	
+	return output;
 }
 
 //Member function that draws the box to the ostream

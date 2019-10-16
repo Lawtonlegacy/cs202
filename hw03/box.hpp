@@ -26,7 +26,7 @@ public:
 
 	~Box();
 
-	int howMany();
+	static int howMany();
 
 	std::string type() const;
 
@@ -40,12 +40,13 @@ public:
 
 	void print(std::ostream& stream) const;
 
+	friend std::ostream& operator<<(std::ostream& output, const Box& box);
+
 private:
 	static int _boxCount;
 	int _height;
 	int _width;
 	boxType _filled;
-
 };
 
 #endif 
