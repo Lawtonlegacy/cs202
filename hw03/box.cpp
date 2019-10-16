@@ -124,4 +124,3 @@ void Box::print(std::ostream& output) const {
 		output << "\n";
 	}
 }
-
