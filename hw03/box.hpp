@@ -13,7 +13,6 @@
 //	2.) Add your new box type as a new switch case to the type() function in box.cpp.
 //	3.) Add a new else if statement with the required code to the print() function in box.cpp.
 //
-//
 
 #ifndef BOX_HPP
 #define BOX_HPP
