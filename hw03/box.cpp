@@ -10,28 +10,28 @@ int Box::_boxCount = 0;
 
 //Default Constructor
 Box::Box() :
-	_height(1), _width(1), _filled(Box::FILLED) 
+	_height(1), _width(1), _type(Box::FILLED) 
 {
 	++Box::_boxCount;
 }
 
 //Constructor for user dimension input
 Box::Box(int width, int height) :
-	_height(height), _width(width), _filled(Box::FILLED) 
+	_height(height), _width(width), _type(Box::FILLED) 
 {
 	++Box::_boxCount;
 }
 
 //Constructor to determine whether filled or hollow and dimension input
 Box::Box(int width, int height, enum boxType type) :
-	_height(height), _width(width), _filled(type) 
+	_height(height), _width(width), _type(type) 
 {
 	++Box::_boxCount;
 }
 
 //Copy Constructor for keepign track of Box Amount
 Box::Box(const Box& previous):
-	_height(previous._height), _width(previous._width), _filled(previous._filled)
+	_height(previous._height), _width(previous._width), _type(previous._type)
 {
 	++Box::_boxCount;
 }
@@ -50,7 +50,7 @@ int Box::howMany() {
 
 //Member function named type() that returns string "Filled" or string "Hollow
 std::string Box::type() const {
-	switch (_filled) {
+	switch (_type) {
 		case FILLED:
 			return "Filled";
 		case HOLLOW:
@@ -95,19 +95,33 @@ void Box::print(std::ostream& output) const {
 
 		for (int col = 0; col < _width; col++) {
 
-			if (row == 0 || row == _height - 1) {
+			//Checkered Box
+			if (_type == CHECKERED) {
+
+				if (col % 2 != 0 && row % 2 != 0) {		//odd numbered rows and columns
+					output << "x";
+				}else if (col % 2 == 0 && row % 2 == 0) {	// even numbered rows and columns
+					output << "x";
+				}else {					// space placed if neither statement works
+					output << " ";
+				}
+
+			}
+			//Filled Box
+			else if (_type == FILLED) {
 				output << "x";
 			}
-			else if (col == 0 || col == _width - 1) {
-				output << "x";
-			}
-			else if (_filled) {
-				output << "x";
-			}
-			else {
-				output << " ";
+			//Hollowed Box for last 2 statements
+			else if (_type == HOLLOW) {
+				if ((row == 0 || row == _height - 1)
+					|| (col == 0 || col == _width - 1)) {
+					output << "x";
+				}else {
+					output << " ";
+				}
 			}
 		}
 		output << "\n";
 	}
 }
+
