@@ -5,11 +5,19 @@
 
 #include "money.hpp"
 
+//Default Constructor
+Money::Money()
+	: _balance(0.00) {}
+
+//Dollars and cents constructor
+Money::Money(const int& dollars, const int& cents)
+	: _balance((double)dollars + (double)cents) {}
 
 
-
-
-
+//Accessor function for balance
+double Money::getBalance() const {
+	return _balance;
+}
 
 //**************Canonical Functions from Hartman****************
 Money& Money::operator+=(const Money& rhs) {

@@ -13,6 +13,12 @@ private:
 
 public:
 
+	Money();
+
+	Money(const int& dollars, const int& cents);
+
+	double getBalance() const;
+
 	Money& operator+=(const Money& rhs);
 
 	Money& operator-=(const Money& rhs);
