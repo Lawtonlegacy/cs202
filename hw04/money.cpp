@@ -13,6 +13,9 @@ Money::Money()
 Money::Money(const int& dollars, const int& cents)
 	: _balance((double)dollars + (double)cents) {}
 
+//Double constructor
+Money::Money(const double & amount)
+	: _balance()
 
 //Accessor function for balance
 double Money::getBalance() const {
