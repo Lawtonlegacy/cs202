@@ -29,7 +29,7 @@ Box::Box(int width, int height, enum boxType type) :
 	++Box::_boxCount;
 }
 
-//Copy Constructor for keepign track of Box Amount
+//Copy Constructor for keeping track of Box Amount
 Box::Box(const Box& previous):
 	_height(previous._height), _width(previous._width), _type(previous._type)
 {
@@ -111,7 +111,7 @@ void Box::print(std::ostream& output) const {
 			else if (_type == FILLED) {
 				output << "x";
 			}
-			//Hollowed Box for last 2 statements
+			//Hollowed Box 
 			else if (_type == HOLLOW) {
 				if ((row == 0 || row == _height - 1)
 					|| (col == 0 || col == _width - 1)) {
