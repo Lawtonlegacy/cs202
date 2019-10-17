@@ -14,15 +14,17 @@ Money::Money(const int& dollars, const int& cents)
 	: _balance((double)dollars + (double)cents) {}
 
 //Double constructor
-Money::Money(const double & amount)
-	: _balance()
+Money::Money(const double& amount)
+	: _balance() {}
 
 //Accessor function for balance
 double Money::getBalance() const {
 	return _balance;
 }
+//******************************************************************
+//**************** Canonical Functions from Hartman ****************
+//******************************************************************
 
-//**************Canonical Functions from Hartman****************
 Money& Money::operator+=(const Money& rhs) {
 	return *this = *this + rhs;
 }
