@@ -7,19 +7,24 @@
 
 //Default Constructor
 Money::Money()
-	: _balance(0.00) {}
+	: _amount(0.00) {}
 
 //Dollars and cents constructor
 Money::Money(const int& dollars, const int& cents)
-	: _balance((double)dollars + (double)cents) {}
+	: _amount((double)dollars + (double)cents/100) {}
 
 //Double constructor
 Money::Money(const double& amount)
-	: _balance() {}
+	: _amount(floor(amount*100+0.5)/100) {}
+
+//Test if one Money object is equal to another (==)
+bool operator ==(const Money& lhs, const Money& rhs) { lhs.getAmount() == rhs.getAmount();}
+
+
 
 //Accessor function for balance
-double Money::getBalance() const {
-	return _balance;
+double Money::getAmount() const {
+	return _amount;
 }
 //******************************************************************
 //**************** Canonical Functions from Hartman ****************

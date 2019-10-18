@@ -4,12 +4,13 @@
 // 10/16/2019
 
 #include <iostream>
+#include <math.h>
 
 class Money {
 
 private:
 
-	double _balance;
+	double _amount;
 
 public:
 
@@ -17,13 +18,22 @@ public:
 
 	Money(const int& dollars, const int& cents);
 
-	double getBalance() const;
+	Money(const double& amount);
+
+
+	double getAmount() const;
 
 	Money& operator+=(const Money& rhs);
 
 	Money& operator-=(const Money& rhs);
 
 };
+
+bool operator ==(const Money& lhs, const Money& rhs);
+
+//******************************************************************
+//**************** Canonical Functions from Hartman ****************
+//******************************************************************
 
 Money operator*(Money lhs, const Money& rhs);
 
