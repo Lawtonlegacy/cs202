@@ -20,6 +20,10 @@ public:
 
 	Money(const double& amount);
 
+	Money& operator+(const Money& rhs)const;
+
+	Money& operator-(const Money& rhs)const;
+
 	double getAmount() const;
 
 	Money& operator+=(const Money& rhs);
