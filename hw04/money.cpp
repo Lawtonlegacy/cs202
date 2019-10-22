@@ -18,9 +18,18 @@ Money::Money(const double& amount)
 	: _amount(floor(amount*100+0.5)/100) {}
 
 //Test if one Money object is equal to another (==)
-bool operator ==(const Money& lhs, const Money& rhs) { lhs.getAmount() == rhs.getAmount();}
+bool operator ==(const Money& lhs, const Money& rhs) { 
+	return (lhs.getAmount() == rhs.getAmount());
+}
 
+//Test if one Money object is less than another (<)
+bool operator<(const Money& lhs, const Money& rhs) { return rhs > lhs; }
 
+//Test if one Money object is less than or equal to another (<=)
+bool operator<=(const Money& lhs, const Money& rhs) { return rhs >= lhs;}
+
+//Test if one Money object is less than or equal to another (>=)
+bool operator>=(const Money& lhs, const Money& rhs) { return rhs <= lhs; }
 
 //Accessor function for balance
 double Money::getAmount() const {
@@ -29,6 +38,14 @@ double Money::getAmount() const {
 //******************************************************************
 //**************** Canonical Functions from Hartman ****************
 //******************************************************************
+
+//Test if one Money object is greater than another (>)
+bool operator>(const Money& lhs, const Money& rhs) { return rhs < lhs; }
+
+//Test if one Money object is not equal to another (!=)
+bool operator!=(const Money& lhs, const Money& rhs) {
+	return !(lhs == rhs);
+}
 
 Money& Money::operator+=(const Money& rhs) {
 	return *this = *this + rhs;
@@ -42,11 +59,3 @@ Money operator*(Money lhs, const Money& rhs) { return lhs *= rhs; }
 
 
 Money operator/(Money lhs, const Money& rhs) { return lhs /= rhs; }
-
-
-bool operator>(const Money& lhs, const Money& rhs) { return rhs < lhs; }
-
-
-bool operator!=(const Money& lhs, const Money& rhs) {
-	return !(lhs == rhs);
-}

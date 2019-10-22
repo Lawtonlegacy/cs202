@@ -20,7 +20,6 @@ public:
 
 	Money(const double& amount);
 
-
 	double getAmount() const;
 
 	Money& operator+=(const Money& rhs);
@@ -30,6 +29,12 @@ public:
 };
 
 bool operator ==(const Money& lhs, const Money& rhs);
+
+bool operator<(const Money& lhs, const Money& rhs);
+
+bool operator<=(const Money& lhs, const Money& rhs);
+
+bool operator>=(const Money& lhs, const Money& rhs);
 
 //******************************************************************
 //**************** Canonical Functions from Hartman ****************
