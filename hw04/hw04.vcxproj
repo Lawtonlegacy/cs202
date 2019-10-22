@@ -18,6 +18,13 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Money.cpp" />
+    <ClCompile Include="moneytest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Money.hpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{8DAAE8C8-C5E7-4FBA-AB40-2B90607F71CE}</ProjectGuid>
@@ -122,13 +129,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="money.cpp" />
-    <ClCompile Include="moneytest.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="money.hpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

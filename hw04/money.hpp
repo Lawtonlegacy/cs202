@@ -1,4 +1,4 @@
-// Homework #4 money.cpp
+// Homework #4 Money.hpp
 // Robert Lawton
 // CS 202 with Hartman
 // 10/16/2019

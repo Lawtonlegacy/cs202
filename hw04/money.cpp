@@ -1,9 +1,9 @@
-// Homework #4 money.cpp
+// Homework #4 Money.cpp
 // Robert Lawton
 // CS 202 with Hartman
 // 10/16/2019
 
-#include "money.hpp"
+#include "Money.hpp"
 
 //Default Constructor
 Money::Money()
