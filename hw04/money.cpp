@@ -69,6 +69,14 @@ Money operator/(const Money& dolamount, const double& amount) {
 	return result;
 }
 
+Money& Money::operator*= (const Money& rhs) {
+	return *this = *this * rhs;
+}
+
+Money& Money::operator/= (const Money& rhs) {
+	return *this = *this / rhs;
+}
+
 
 //******************************************************************
 //**************** Canonical Functions from Hartman ****************
@@ -89,6 +97,5 @@ Money& Money::operator-=(const Money& rhs) {
 }
 
 Money operator*(Money lhs, const Money& rhs) { return lhs *= rhs; }
-
 
 Money operator/(Money lhs, const Money& rhs) { return lhs /= rhs; }

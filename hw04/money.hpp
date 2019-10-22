@@ -30,7 +30,11 @@ public:
 
 	friend Money operator*(const Money& dolamount, const double& amount);
 
-	friend Money operator/(const double& amount, const Money& dolamount);
+	friend Money operator/(const Money& dolamount, const double& amount);
+
+	Money& operator*=(const Money& rhs);
+
+	Money& operator/= (const Money& rhs);
 
 	Money& operator+=(const Money& rhs);
 
