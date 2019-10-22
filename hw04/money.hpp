@@ -20,11 +20,17 @@ public:
 
 	Money(const double& amount);
 
+	double getAmount() const;
+
 	Money& operator+(const Money& rhs)const;
 
 	Money& operator-(const Money& rhs)const;
 
-	double getAmount() const;
+	friend Money operator*(const double& amount, const Money& dolamount);
+
+	friend Money operator*(const Money& dolamount, const double& amount);
+
+	friend Money operator/(const double& amount, const Money& dolamount);
 
 	Money& operator+=(const Money& rhs);
 
