@@ -22,27 +22,27 @@ double Money::getAmount() const {
 	return _amount;
 }
 
+//Conditional operators
+bool operator ==(const Money& lhs, const Money& rhs) { return (lhs.getAmount() == rhs.getAmount());}
+bool operator<(const Money& lhs, const Money& rhs) { return rhs.getAmount() > lhs.getAmount();}
+bool operator<=(const Money& lhs, const Money& rhs) { return rhs.getAmount() >= lhs.getAmount();}
+bool operator>=(const Money& lhs, const Money& rhs) { return rhs.getAmount() <= lhs.getAmount();}
+//**************** Canonical Function from Hartman ****************
+bool operator>(const Money& lhs, const Money& rhs) { return rhs < lhs;}
+//**************** Canonical Function from Hartman ****************
+bool operator!=(const Money& lhs, const Money& rhs) { return !(lhs == rhs);}
 
-bool operator ==(const Money& lhs, const Money& rhs) { return (lhs == rhs);}
-
-
-bool operator<(const Money& lhs, const Money& rhs) { return rhs > lhs;}
-
-
-bool operator<=(const Money& lhs, const Money& rhs) { return rhs >= lhs;}
-
-
-bool operator>=(const Money& lhs, const Money& rhs) { return rhs <= lhs;}
+//Arithmetic operators
 
 //Add two Money objects
 Money operator+(const Money& lhs,const Money& rhs) {
-	Money newBal(lhs + rhs);
+	Money newBal(lhs.getAmount() + rhs.getAmount());
 	return newBal;
 }
 
 //Subtract two Money objects
 Money operator-(const Money& lhs, const Money& rhs) {
-	Money newBal(lhs - rhs);
+	Money newBal(lhs.getAmount() - rhs.getAmount());
 	return newBal;
 }
 
@@ -71,12 +71,13 @@ Money operator/(const Money& dolamount, const double& amount) {
 }
 
 Money& Money::operator*= (const Money& rhs) {
-	return *this = *this * rhs;
+	return *this = *this * rhs.getAmount();
 }
 
 Money& Money::operator/= (const Money& rhs) {
-	return *this = *this / rhs;
+	return *this = *this / rhs.getAmount();
 }
+
 
 std::ostream& operator<<(std::ostream& output, const Money& amount) {
 	if (amount.getAmount() == 0) {
@@ -93,15 +94,7 @@ std::ostream& operator<<(std::ostream& output, const Money& amount) {
 	return output;
 }
 
-//******************************************************************
-//**************** Canonical Functions from Hartman ****************
-//******************************************************************
 
-
-bool operator>(const Money& lhs, const Money& rhs) { return rhs < lhs; }
-
-
-bool operator!=(const Money& lhs, const Money& rhs) { return !(lhs == rhs);}
 
 Money& Money::operator+=(const Money& rhs) {
 	return *this = *this + rhs;
