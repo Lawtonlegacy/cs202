@@ -22,26 +22,27 @@ double Money::getAmount() const {
 	return _amount;
 }
 
-//Test if one Money object is equal to another (==)
+
 bool operator ==(const Money& lhs, const Money& rhs) { return (lhs == rhs);}
 
-//Test if one Money object is less than another (<)
+
 bool operator<(const Money& lhs, const Money& rhs) { return rhs > lhs;}
 
-//Test if one Money object is less than or equal to another (<=)
+
 bool operator<=(const Money& lhs, const Money& rhs) { return rhs >= lhs;}
 
-//Test if one Money object is less than or equal to another (>=)
+
 bool operator>=(const Money& lhs, const Money& rhs) { return rhs <= lhs;}
 
 //Add two Money objects
-Money& Money::operator+(const Money& rhs)const {
-	Money newBal(*this + rhs);
+Money operator+(const Money& lhs,const Money& rhs) {
+	Money newBal(lhs + rhs);
 	return newBal;
 }
+
 //Subtract two Money objects
-Money& Money::operator-(const Money& rhs)const {
-	Money newBal(*this - rhs);
+Money operator-(const Money& lhs, const Money& rhs) {
+	Money newBal(lhs - rhs);
 	return newBal;
 }
 
@@ -77,15 +78,29 @@ Money& Money::operator/= (const Money& rhs) {
 	return *this = *this / rhs;
 }
 
+std::ostream& operator<<(std::ostream& output, const Money& amount) {
+	if (amount.getAmount() == 0) {
+		output << "$0.00";
+	}
+	else if (amount.getAmount() < 0) {
+		double fixedAmount = amount.getAmount() * -1.00;
+		output << "-$" << fixedAmount;
+	}
+	else {
+		output << "$" << amount.getAmount();
+	}
+
+	return output;
+}
 
 //******************************************************************
 //**************** Canonical Functions from Hartman ****************
 //******************************************************************
 
-//Test if one Money object is greater than another (>)
+
 bool operator>(const Money& lhs, const Money& rhs) { return rhs < lhs; }
 
-//Test if one Money object is not equal to another (!=)
+
 bool operator!=(const Money& lhs, const Money& rhs) { return !(lhs == rhs);}
 
 Money& Money::operator+=(const Money& rhs) {
