@@ -45,6 +45,10 @@ Money operator-(const Money& lhs, const Money& rhs) {
 	Money newBal(lhs.getAmount() - rhs.getAmount());
 	return newBal;
 }
+//**************** Canonical Function from Hartman ****************
+Money operator*(Money lhs, const Money& rhs) { return lhs *= rhs; }
+//**************** Canonical Function from Hartman ****************
+Money operator/(Money lhs, const Money& rhs) { return lhs /= rhs; }
 
 //Multiply a double times a Money object
 Money operator*(const double& amount, const Money& dolamount) {
@@ -70,15 +74,15 @@ Money operator/(const Money& dolamount, const double& amount) {
 	return result;
 }
 
-Money& Money::operator*= (const Money& rhs) {
-	return *this = *this * rhs.getAmount();
-}
+//Assignment operators (need to be member functions)
+Money& Money::operator*= (const Money& rhs) {return *this = *this * rhs.getAmount();}
+Money& Money::operator/= (const Money& rhs) {return *this = *this / rhs.getAmount();}
+//**************** Canonical Function from Hartman ****************
+Money& Money::operator+=(const Money& rhs) {return *this = *this + rhs;}
+//**************** Canonical Function from Hartman ****************
+Money& Money::operator-=(const Money& rhs) {return *this = *this - rhs;}
 
-Money& Money::operator/= (const Money& rhs) {
-	return *this = *this / rhs.getAmount();
-}
-
-
+//Ostream to print money object
 std::ostream& operator<<(std::ostream& output, const Money& amount) {
 	if (amount.getAmount() == 0) {
 		output << "$0.00";
@@ -90,20 +94,5 @@ std::ostream& operator<<(std::ostream& output, const Money& amount) {
 	else {
 		output << "$" << amount.getAmount();
 	}
-
 	return output;
 }
-
-
-
-Money& Money::operator+=(const Money& rhs) {
-	return *this = *this + rhs;
-}
-
-Money& Money::operator-=(const Money& rhs) {
-	return *this = *this - rhs;
-}
-
-Money operator*(Money lhs, const Money& rhs) { return lhs *= rhs; }
-
-Money operator/(Money lhs, const Money& rhs) { return lhs /= rhs; }
