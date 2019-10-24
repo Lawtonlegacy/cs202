@@ -15,11 +15,17 @@ Money::Money(const int& dollars, const int& cents)
 
 //Double constructor
 Money::Money(const double& amount)
-	: _amount(floor(amount*100+0.5)/100) {}
+	: _amount(roundDouble(amount)) {}
 
 //Accessor function for balance
 double Money::getAmount() const {
 	return _amount;
+}
+
+//Function for rounding double to $x.xx format
+double roundDouble(const double& num) {
+	double fixed = (floor(num * 100 + 0.5) / 100);
+	return fixed;
 }
 
 //Conditional operators
@@ -53,7 +59,7 @@ Money operator/(Money lhs, const Money& rhs) { return lhs /= rhs; }
 //Multiply a double times a Money object
 Money operator*(const double& amount, const Money& dolamount) {
 	double temp = amount * dolamount.getAmount();
-	double fixedAmount = floor(temp * 100 + 0.5) / 100;
+	double fixedAmount = roundDouble(temp);
 	Money result(fixedAmount);
 	return result;
 }
@@ -61,7 +67,7 @@ Money operator*(const double& amount, const Money& dolamount) {
 //Multiply a Money object times a double
 Money operator*(const Money& dolamount, const double& amount) {
 	double temp = amount * dolamount.getAmount();
-	double fixedAmount = floor(temp * 100 + 0.5) / 100;
+	double fixedAmount = roundDouble(temp);
 	Money result(fixedAmount);
 	return result;
 }
@@ -69,7 +75,7 @@ Money operator*(const Money& dolamount, const double& amount) {
 //Divide a Money object by a double
 Money operator/(const Money& dolamount, const double& amount) {
 	double temp = dolamount.getAmount() / amount;
-	double fixedAmount = floor(temp * 100 + 0.5) / 100;
+	double fixedAmount = roundDouble(temp);
 	Money result(fixedAmount);
 	return result;
 }

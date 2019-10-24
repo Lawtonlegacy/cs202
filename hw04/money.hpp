@@ -35,6 +35,8 @@ public:
 
 };
 
+double roundDouble(const double& num);
+
 bool operator ==(const Money& lhs, const Money& rhs);
 bool operator<(const Money& lhs, const Money& rhs);
 bool operator<=(const Money& lhs, const Money& rhs);
