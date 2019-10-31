@@ -43,7 +43,7 @@ public:
 		std::cout << "Made a child with height" << _height << std::endl;
 	}
 
-	Child(int height, int age) : _age(age), _height(height)
+	Child(int height, int age) : Person(age), _height(height)
 	{
 		std::cout << "Made a child with height: " << _height << " and age: " << _age << std::endl;
 	}
@@ -60,5 +60,25 @@ private:
 
 int main()
 {
-	Person p(20);
+	// Default Base Class Object
+	{
+		Person();
+	}
+	std::cout << std::endl;
+	// A base class object using the one parameter constructor
+	{
+		Person(22);
+	}
+	std::cout << std::endl;
+	// A default derived class object
+	{
+		Child();
+	}
+	std::cout << std::endl;
+	//A derived class object using the two parameter constructor
+	{
+		Child(3, 7);
+	}
+
+	return 0;
 }
