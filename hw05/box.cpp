@@ -1,7 +1,7 @@
-// Homework #3 box.cpp
+// Homework #5 box.cpp
 // Robert Lawton
 // CS 202 with Hartman
-// 10/11/2019
+// 10/31/2019
 
 #include "box.hpp"
 

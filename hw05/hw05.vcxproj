@@ -125,9 +125,11 @@
   <ItemGroup>
     <ClCompile Include="box.cpp" />
     <ClCompile Include="box_test.cpp" />
+    <ClCompile Include="FilledBox.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="box.hpp" />
+    <ClInclude Include="Filledbox.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
