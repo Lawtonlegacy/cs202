@@ -10,28 +10,14 @@ int Box::_boxCount = 0;
 
 //Default Constructor
 Box::Box() :
-	_height(1), _width(1), _type(Box::FILLED)
+	_height(1), _width(1)
 {
 	++Box::_boxCount;
 }
 
 //Constructor for user dimension input
 Box::Box(int width, int height) :
-	_height(height), _width(width), _type(Box::FILLED)
-{
-	++Box::_boxCount;
-}
-
-//Constructor to determine whether filled or hollow and dimension input
-Box::Box(int width, int height, enum boxType type) :
-	_height(height), _width(width), _type(type)
-{
-	++Box::_boxCount;
-}
-
-//Copy Constructor for keeping track of Box Amount
-Box::Box(const Box& previous) :
-	_height(previous._height), _width(previous._width), _type(previous._type)
+	_height(height), _width(width)
 {
 	++Box::_boxCount;
 }
@@ -45,21 +31,6 @@ Box::~Box()
 //Member function to keep track of how many Box objects exist
 int Box::howMany() {
 	return Box::_boxCount;
-}
-
-
-//Member function named type() that returns string "Filled" or string "Hollow
-std::string Box::type() const {
-	switch (_type) {
-	case FILLED:
-		return "Filled";
-	case HOLLOW:
-		return "Hollow";
-	case CHECKERED:
-		return "Checkered";
-	default:
-		return "Error.. box type not detected";
-	}
 }
 
 //getWidth() accessor function

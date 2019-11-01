@@ -25,39 +25,27 @@ class Box {
 
 public:
 
-	enum boxType { FILLED, HOLLOW, CHECKERED };
-
 	Box();
-
 	Box(int width, int height);
-
-	Box(int width, int height, enum boxType type);
-
-	Box(const Box& previous);
-
 	~Box();
 
 	static int howMany();
 
-	std::string type() const;
-
 	int getWidth() const;
-
 	int getHeight() const;
-
 	void setWidth(const int& width);
-
 	void setHeight(const int& height);
 
 	void print(std::ostream& stream) const;
 
 	friend std::ostream& operator<<(std::ostream& output, const Box& box);
 
-private:
+
+protected:
 	static int _boxCount;
 	int _height;
 	int _width;
-	boxType _type;
 };
+
 
 #endif 
