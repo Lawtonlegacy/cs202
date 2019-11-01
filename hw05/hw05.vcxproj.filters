@@ -24,12 +24,24 @@
     <ClCompile Include="FilledBox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="HollowedBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckeredBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="box.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Filledbox.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HollowedBox.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckeredBox.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

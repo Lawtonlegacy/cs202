@@ -59,6 +59,23 @@ std::ostream& operator<<(std::ostream& output, const Box& box) {
 	return output;
 }
 
+//Box Factory function
+std::unique_ptr<Box> boxFactory(char c, int w, int h) {
+	switch (c) {
+		case 'f':
+			return std::make_unique<FilledBox>();
+		case 'h':
+			return std::make_unique<HollowedBox>();
+		case 'c':
+			return std::make_unique<CheckeredBox>();
+		default:
+			break;
+	}
+}
+
+
+
+
 //Member function that draws the box to the ostream
 //void Box::print(std::ostream& output) const {
 //

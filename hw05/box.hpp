@@ -3,21 +3,12 @@
 // CS 202 with Hartman
 // 10/31/2019
 
-
-
-// Created by Robert Lawton 10/15
-//
-//	INSTRUCTIONS TO ADD A NEW TYPE OF BOX:
-//		
-//	1.) Add the type you wish to incorporate to the ENUM below.
-//	2.) Add your new box type as a new switch case to the type() function in box.cpp.
-//	3.) Add a new else if statement with the required code to the print() function in box.cpp.
-//
-
 #ifndef BOX_HPP
 #define BOX_HPP
 
 #include "Filledbox.hpp"
+#include "HollowedBox.hpp"
+#include "CheckeredBox.hpp"
 
 #include <string>
 #include <ostream>
@@ -51,6 +42,6 @@ protected:
 	int _width;
 };
 
-
+std::unique_ptr<Box> boxFactory(char c, int w, int h);
 
 #endif 
