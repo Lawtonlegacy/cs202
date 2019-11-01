@@ -63,55 +63,12 @@ std::ostream& operator<<(std::ostream& output, const Box& box) {
 std::unique_ptr<Box> boxFactory(char c, int w, int h) {
 	switch (c) {
 		case 'f':
-			return std::make_unique<FilledBox>();
+			return std::make_unique<FilledBox>(w,h);
 		case 'h':
-			return std::make_unique<HollowBox>();
+			return std::make_unique<HollowBox>(w,h);
 		case 'c':
-			return std::make_unique<CheckeredBox>();
+			return std::make_unique<CheckeredBox>(w,h);
 		default:
 			break;
 	}
 }
-
-
-
-
-//Member function that draws the box to the ostream
-//void Box::print(std::ostream& output) const {
-//
-//	for (int row = 0; row < _height; ++row) {
-//
-//		for (int col = 0; col < _width; col++) {
-//
-//			Checkered Box
-//			if (_type == CHECKERED) {
-//
-//				if (col % 2 != 0 && row % 2 != 0) {		//odd numbered rows and columns
-//					output << "x";
-//				}
-//				else if (col % 2 == 0 && row % 2 == 0) {	// even numbered rows and columns
-//					output << "x";
-//				}
-//				else {					// space placed if neither statement works
-//					output << " ";
-//				}
-//
-//			}
-//			Filled Box
-//			else if (_type == FILLED) {
-//				output << "x";
-//			}
-//			Hollowed Box 
-//			else if (_type == HOLLOW) {
-//				if ((row == 0 || row == _height - 1)
-//					|| (col == 0 || col == _width - 1)) {
-//					output << "x";
-//				}
-//				else {
-//					output << " ";
-//				}
-//			}
-//		}
-//		output << "\n";
-//	}
-//}
