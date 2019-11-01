@@ -5,6 +5,14 @@
 
 #include "CheckeredBox.hpp"
 
+//Default Constructor
+CheckeredBox::CheckeredBox()
+	: Box::Box(1, 1) {}
+
+//Constructor with specified width and height
+CheckeredBox::CheckeredBox(int width, int height)
+	: Box::Box(width, height) {}
+
 //Print type
 std::string CheckeredBox::type() const {
 	return "Checkered";

@@ -127,13 +127,13 @@
     <ClCompile Include="box_test.cpp" />
     <ClCompile Include="CheckeredBox.cpp" />
     <ClCompile Include="FilledBox.cpp" />
-    <ClCompile Include="HollowedBox.cpp" />
+    <ClCompile Include="HollowBox.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="box.hpp" />
     <ClInclude Include="CheckeredBox.hpp" />
     <ClInclude Include="Filledbox.hpp" />
-    <ClInclude Include="HollowedBox.hpp" />
+    <ClInclude Include="HollowBox.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

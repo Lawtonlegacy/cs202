@@ -24,10 +24,10 @@
     <ClCompile Include="FilledBox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="HollowedBox.cpp">
+    <ClCompile Include="CheckeredBox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CheckeredBox.cpp">
+    <ClCompile Include="HollowBox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,10 +38,10 @@
     <ClInclude Include="Filledbox.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HollowedBox.hpp">
+    <ClInclude Include="CheckeredBox.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CheckeredBox.hpp">
+    <ClInclude Include="HollowBox.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

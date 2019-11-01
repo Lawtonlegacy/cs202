@@ -6,9 +6,6 @@
 #ifndef BOX_HPP
 #define BOX_HPP
 
-#include "Filledbox.hpp"
-#include "HollowedBox.hpp"
-#include "CheckeredBox.hpp"
 
 #include <string>
 #include <ostream>
@@ -41,6 +38,10 @@ protected:
 	int _height;
 	int _width;
 };
+
+#include "Filledbox.hpp"
+#include "HollowBox.hpp"
+#include "CheckeredBox.hpp"
 
 std::unique_ptr<Box> boxFactory(char c, int w, int h);
 

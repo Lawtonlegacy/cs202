@@ -8,16 +8,19 @@
 
 
 #include "box.hpp"
+#include <iostream>
 
 class FilledBox : public Box {
 
 public:
 
-	using Box::Box;
+	FilledBox();
 
-	std::string type() const override;
+	FilledBox(int width, int height);
 
-	void print(std::ostream& os) const override;
+	std::string type() const;
+
+	void print(std::ostream& os) const;
 
 };
 

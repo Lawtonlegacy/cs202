@@ -65,7 +65,7 @@ std::unique_ptr<Box> boxFactory(char c, int w, int h) {
 		case 'f':
 			return std::make_unique<FilledBox>();
 		case 'h':
-			return std::make_unique<HollowedBox>();
+			return std::make_unique<HollowBox>();
 		case 'c':
 			return std::make_unique<CheckeredBox>();
 		default:

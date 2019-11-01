@@ -8,16 +8,19 @@
 
 
 #include "box.hpp"
+#include <iostream>
 
 class CheckeredBox : public Box {
 
 public:
 
-	using Box::Box;
+	CheckeredBox();
 
-	std::string type() const override;
+	CheckeredBox(int width, int height);
 
-	void print(std::ostream& os) const override;
+	std::string type() const;
+
+	void print(std::ostream& os) const;
 
 };
 

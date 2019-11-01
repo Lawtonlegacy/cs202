@@ -5,6 +5,13 @@
 
 #include "Filledbox.hpp"
 
+//Default Constuctor
+FilledBox::FilledBox()
+	: Box::Box(1, 1) {}
+
+//Constructor with specified width and height
+FilledBox::FilledBox(int width, int height)
+	: Box::Box(width, height) {}
 
 //Print type
 std::string FilledBox::type() const {

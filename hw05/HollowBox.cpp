@@ -1,17 +1,25 @@
-// Homework #5 HollowedBox.cpp
+// Homework #5 HollowBox.cpp
 // Robert Lawton
 // CS 202 with Hartman
 // 10/31/2019
 
-#include "HollowedBox.hpp"
+#include "HollowBox.hpp"
+
+//Default Constructor
+HollowBox::HollowBox()
+	:Box::Box(1, 1) {}
+
+//Constructor with specified width and height
+HollowBox::HollowBox(int width, int height)
+	: Box::Box(width, height) {}
 
 //Print type
-std::string HollowedBox::type() const {
+std::string HollowBox::type() const {
 	return "Hollow";
 }
 
 //Print HollowedBox to ostream
-void HollowedBox::print(std::ostream& os) const {
+void HollowBox::print(std::ostream& os) const {
 
 	for (int row = 0; row < _height; ++row) {
 
