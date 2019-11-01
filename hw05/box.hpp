@@ -17,6 +17,8 @@
 #ifndef BOX_HPP
 #define BOX_HPP
 
+#include "Filledbox.hpp"
+
 #include <string>
 #include <ostream>
 
@@ -36,7 +38,9 @@ public:
 	void setWidth(const int& width);
 	void setHeight(const int& height);
 
-	void print(std::ostream& stream) const;
+	virtual void print(std::ostream& stream) const;
+
+	virtual std::string type() const;
 
 	friend std::ostream& operator<<(std::ostream& output, const Box& box);
 
@@ -46,5 +50,7 @@ protected:
 	int _height;
 	int _width;
 };
+
+
 
 #endif 

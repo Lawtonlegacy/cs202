@@ -9,6 +9,9 @@ class FilledBox : public Box {
 
 public:
 
+	using Box::Box;
+
+	void print(std::ostream& os);
 
 
 };
