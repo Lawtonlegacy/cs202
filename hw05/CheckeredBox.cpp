@@ -13,6 +13,9 @@ CheckeredBox::CheckeredBox()
 CheckeredBox::CheckeredBox(int width, int height)
 	: Box::Box(width, height) {}
 
+//Virtual Destructor
+CheckeredBox::~CheckeredBox() {}
+
 //Print type
 std::string CheckeredBox::type() const {
 	return "Checkered";

@@ -17,7 +17,7 @@ public:
 
 	Box();
 	Box(int width, int height);
-	~Box();
+	virtual ~Box();
 
 	static int howMany();
 

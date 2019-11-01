@@ -15,8 +15,8 @@ class HollowBox : public Box {
 public:
 
 	HollowBox();
-
 	HollowBox(int width, int height);
+	~HollowBox();
 
 	std::string type() const ;
 
