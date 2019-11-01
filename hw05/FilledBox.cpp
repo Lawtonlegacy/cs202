@@ -11,7 +11,7 @@ std::string FilledBox::type() const {
 	return "Filled";
 }
 
-//Print box to ostream
+//Print FilledBox to ostream
 void FilledBox::print(std::ostream& os) const {
 
 	for (int row = 0; row < _height; ++row) {

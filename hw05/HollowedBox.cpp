@@ -10,7 +10,7 @@ std::string HollowedBox::type() const {
 	return "Hollow";
 }
 
-//Print box to ostream
+//Print HollowedBox to ostream
 void HollowedBox::print(std::ostream& os) const {
 
 	for (int row = 0; row < _height; ++row) {
