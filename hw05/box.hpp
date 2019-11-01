@@ -38,9 +38,9 @@ public:
 	void setWidth(const int& width);
 	void setHeight(const int& height);
 
-	virtual void print(std::ostream& stream) const;
+	virtual void print(std::ostream& stream) const = 0;
 
-	virtual std::string type() const;
+	virtual std::string type() const = 0;
 
 	friend std::ostream& operator<<(std::ostream& output, const Box& box);
 
