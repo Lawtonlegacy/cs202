@@ -1,3 +1,6 @@
+// Lab on Function Templates
+// Robert Lawton
+
 #include <iostream>
 
 template<typename T>
