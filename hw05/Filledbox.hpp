@@ -16,7 +16,6 @@ public:
 
 	FilledBox();
 	FilledBox(int width, int height);
-	~FilledBox();
 
 	std::string type() const;
 

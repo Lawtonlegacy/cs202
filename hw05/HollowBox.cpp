@@ -13,9 +13,6 @@ HollowBox::HollowBox()
 HollowBox::HollowBox(int width, int height)
 	: Box::Box(width, height) {}
 
-//Virtual Destructor
-HollowBox::~HollowBox() {}
-
 //Print type
 std::string HollowBox::type() const {
 	return "Hollow";
