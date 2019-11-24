@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 
+//Part A printVector template function
 template<typename V>
 void printVector(std::ostream& os, std::vector <V> any) {
 	for (auto i : any) {
@@ -12,6 +13,7 @@ void printVector(std::ostream& os, std::vector <V> any) {
 	std::endl;
 }
 
+//Part B RAIIptr Class Template
 template<typename T>
 class RAIIPtr {
 public:
@@ -21,7 +23,10 @@ private:
 	T _ptrVal;
 };
 
+//Constructor which takes a T*
 template <typename T>
 RAIIPtr<T>::RAIIPtr(const T*& ptr) :_ptrVal(ptr) {}
+
+
 
 #endif
