@@ -22,8 +22,10 @@ public:
 	//Overloaded operator* (dereference)
 	T& operator*(T ptr) {
 		return *ptr;
-	}
+	};
 
+	//Overloaded operator->
+	T* operator->;
 private:
 	T _ptrVal;
 };
