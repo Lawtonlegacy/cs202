@@ -15,11 +15,13 @@ void printVector(std::ostream& os, std::vector <V> any) {
 template<typename T>
 class RAIIPtr {
 public:
-
+	RAIIPtr(const T* &ptr);
 
 private:
-
+	T _ptrVal;
 };
 
+template <typename T>
+RAIIPtr<T>::RAIIPtr(const T*& ptr) :_ptrVal(ptr) {}
 
 #endif
