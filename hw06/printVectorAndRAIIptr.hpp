@@ -12,5 +12,14 @@ void printVector(std::ostream& os, std::vector <V> any) {
 	std::endl;
 }
 
+template<typename T>
+class RAIIPtr {
+public:
+
+
+private:
+
+};
+
 
 #endif
