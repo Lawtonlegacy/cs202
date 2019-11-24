@@ -18,6 +18,11 @@ template<typename T>
 class RAIIPtr {
 public:
 	RAIIPtr(const T* &ptr);
+	
+	//Overloaded operator* (dereference)
+	T& operator*(T ptr) {
+		return *ptr;
+	}
 
 private:
 	T _ptrVal;
@@ -26,7 +31,6 @@ private:
 //Constructor which takes a T*
 template <typename T>
 RAIIPtr<T>::RAIIPtr(const T*& ptr) :_ptrVal(ptr) {}
-
 
 
 #endif
