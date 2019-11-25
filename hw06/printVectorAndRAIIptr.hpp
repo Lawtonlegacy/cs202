@@ -8,9 +8,9 @@
 template<typename T>
 void printVector(std::ostream& os, std::vector <T> any) {
 	for (auto i : any) {
-		os << i << std::endl;
+		os << i << '\n';
 	}
-	std::endl;
+
 }
 
 //Part B RAIIptr Class Template
@@ -25,7 +25,7 @@ public:
 	T& operator*();
 
 	//Overloaded operator->
-	T operator->();
+	T* operator->();
 
 	//Destuctor
 	~RAIIPtr();
@@ -44,11 +44,11 @@ RAIIPtr<T>::~RAIIPtr() { delete(_raiiPtr); }
 
 //Overloaded operator*
 template <typename T>
-T& RAIIPtr<T>::operator*() { return _raiiPtr; };
+T& RAIIPtr<T>::operator*() { return *_raiiPtr; };
 
 //Overloaded operator->
 template <typename T>
-T RAIIPtr<T>::operator->() { return _raiiPtr; };
+T* RAIIPtr<T>::operator->() { return _raiiPtr; };
 
 
 #endif
