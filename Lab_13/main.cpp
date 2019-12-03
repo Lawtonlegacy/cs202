@@ -22,7 +22,7 @@ int main() {
 	std::cout << twice(std::string("Hello")) << std::endl;
 
 	//Part 2 & 3 w/ C-style string
-	const char *cstring = "World";
+	const char* cstring = "World";
 	std::cout << twice(cstring) << std::endl;
 
 	return 0;

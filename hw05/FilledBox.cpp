@@ -13,9 +13,6 @@ FilledBox::FilledBox()
 FilledBox::FilledBox(int width, int height)
 	: Box::Box(width, height) {}
 
-//Virtual Destructor
-FilledBox::~FilledBox() {}
-
 //Print type
 std::string FilledBox::type() const {
 	return "Filled";

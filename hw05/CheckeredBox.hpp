@@ -16,7 +16,6 @@ public:
 
 	CheckeredBox();
 	CheckeredBox(int width, int height);
-	~CheckeredBox();
 
 	std::string type() const;
 
